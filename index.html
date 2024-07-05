@@ -21,6 +21,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            padding: 20px;
         }
         .footer {
             display: flex;
@@ -39,22 +41,30 @@
         .intro-text {
             font-family: 'Lobster', cursive;
             font-size: 24px;
+            max-width: 80%;
+        }
+        @media (max-width: 600px) {
+            .intro-text {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <div class="intro-text">Hello, I am Adrian, a TikToker from Romania</div>
+        <div class="intro-text">
+            Hello, I am Adrian, a TikToker from Romania
+        </div>
     </div>
     <div class="footer">
         <a href="https://discord.com/invite/QBaCuSJtXq" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Font_Awesome_5_brands_discord.svg" alt="Discord Logo">
         </a>
         <a href="https://www.instagram.com/adrian._.madalin/?next=%2F" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
         </a>
         <a href="https://www.tiktok.com/@adrianmadalin10" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/TikTok_logomark.svg" alt="TikTok Logo">
         </a>
     </div>
 </body>
