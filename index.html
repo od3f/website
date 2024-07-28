@@ -63,7 +63,7 @@
             align-items: center;
             text-align: center;
             padding: 20px;
-            margin-top: -50px; /* Adjusted margin to move text up */
+            margin-top: 50px; /* Adjusted margin to move text down */
         }
 
         .intro-text {
@@ -72,6 +72,74 @@
             max-width: 80%;
             text-align: center;
             margin-top: -30px; /* Adjusted margin to move text up */
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            border: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .version-info {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
         }
 
         @media (max-width: 600px) {
@@ -112,5 +180,32 @@
             Hello, I am Adrian, a TikToker from Romania
         </div>
     </div>
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="showVersion()">Version</a>
+    </div>
+    <div id="versionInfo" class="version-info">
+        <span class="closebtn" onclick="hideVersion()">&times;</span>
+        <p>Version 1<br>Code Name: Supernova</p>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        function showVersion() {
+            document.getElementById("versionInfo").style.display = "block";
+        }
+
+        function hideVersion() {
+            document.getElementById("versionInfo").style.display = "none";
+        }
+    </script>
 </body>
 </html>
