@@ -37,6 +37,7 @@
 
         .footer {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 10px;
@@ -51,6 +52,12 @@
             width: 40px;
             height: 40px;
             cursor: pointer;
+        }
+
+        .contact-text {
+            font-family: 'Lobster', cursive;
+            font-size: 24px; /* Font size for contact text */
+            margin-bottom: 10px; /* Space between text and icons */
         }
 
         .intro-text {
@@ -75,6 +82,11 @@
                 width: 30px; /* Adjust icon size for smaller screens */
                 height: 30px;
             }
+
+            .contact-text {
+                font-size: 20px; /* Adjust font size for smaller screens */
+                margin-bottom: 5px; /* Adjust margin for smaller screens */
+            }
         }
     </style>
 </head>
@@ -85,15 +97,18 @@
         </div>
     </div>
     <div class="footer">
-        <a href="https://discord.com/invite/s7pXWJRyW7" target="_blank">
-            <img src="https://i.ibb.co/5n4McGj/download.png" alt="Discord Logo">
-        </a>
-        <a href="https://www.instagram.com/adrian._.madalin/?next=%2F" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Logo">
-        </a>
-        <a href="https://www.tiktok.com/@adrianmadalin10" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok Logo">
-        </a>
+        <div class="contact-text">Contact Me</div>
+        <div class="icons">
+            <a href="https://discord.com/invite/s7pXWJRyW7" target="_blank">
+                <img src="https://i.ibb.co/5n4McGj/download.png" alt="Discord Logo">
+            </a>
+            <a href="https://www.instagram.com/adrian._.madalin/?next=%2F" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Logo">
+            </a>
+            <a href="https://www.tiktok.com/@adrianmadalin10" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok Logo">
+            </a>
+        </div>
     </div>
 </body>
 </html>
