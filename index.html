@@ -124,7 +124,7 @@
 
         .version-info {
             display: none;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
             border-radius: 10px;
             padding: 20px;
@@ -133,6 +133,14 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .version-info p {
+            font-size: 24px;
+            margin: 0;
         }
 
         .closebtn {
@@ -140,6 +148,8 @@
             top: 10px;
             right: 25px;
             font-size: 36px;
+            color: white;
+            cursor: pointer;
         }
 
         @media (max-width: 600px) {
@@ -183,11 +193,11 @@
     <button class="openbtn" onclick="openNav()">☰</button>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="javascript:void(0)" onclick="showVersion()">Version</a>
+        <a href="javascript:void(0)" onclick="showVersion()">Version 1.0</a>
     </div>
     <div id="versionInfo" class="version-info">
         <span class="closebtn" onclick="hideVersion()">&times;</span>
-        <p>Version 1<br>Code Name: Supernova</p>
+        <p>Version 1.0<br>Code Name: Supernova</p>
     </div>
 
     <script>
