@@ -6,6 +6,11 @@
     <title>Adrian</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
     <style>
+        @keyframes moveBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -15,7 +20,11 @@
             min-height: 100vh;
             justify-content: center;
             align-items: center;
+            background: #0D0D0D url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+            animation: moveBackground 20s linear infinite;
+            color: white; /* Ensure text is visible in dark mode */
         }
+
         .content {
             flex: 1;
             display: flex;
@@ -25,22 +34,25 @@
             padding: 20px;
             margin-top: -50px; /* Adjusted margin to move text up */
         }
+
         .footer {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px;
-            background-color: #f1f1f1;
+            background-color: #333;
             width: 100%;
             position: fixed;
             bottom: 0;
         }
+
         .footer img {
             margin: 0 10px;
             width: 40px;
             height: 40px;
             cursor: pointer;
         }
+
         .intro-text {
             font-family: 'Lobster', cursive;
             font-size: 36px; /* Increased font size for intro text */
@@ -48,14 +60,17 @@
             text-align: center;
             margin-top: -30px; /* Adjusted margin to move text up */
         }
+
         @media (max-width: 600px) {
             .intro-text {
                 font-size: 24px; /* Adjusted font size for smaller screens */
                 margin-top: -20px; /* Adjusted margin for smaller screens */
             }
+
             .footer {
                 padding: 5px; /* Adjust padding to make icons more visible */
             }
+
             .footer img {
                 width: 30px; /* Adjust icon size for smaller screens */
                 height: 30px;
